@@ -1,0 +1,178 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background: #FAFAFA !important;
+}
+
+ul li {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+p{
+    margin-bottom: 5px !important;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+*{
+    box-sizing: border-box;
+    border: 0px;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.cate{
+    position: fixed;
+    width: 20%;
+    top: 95px;
+    padding: 5px 10px;
+    margin-top: 18px;
+}
+.cate-content{
+    height: 600px;
+    border: 1px solid #E0E0E0;
+    border-radius: 3px;
+    background: white;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.mycard{
+    position: relative;
+    padding: 5px 5px;
+    margin-top: 20px;
+    transition: all 1s;
+    animation: slide-down .3s ease-out;
+}
+.card-content{
+    background: white;
+    padding: 2px 5px 10px;
+    border: 1px solid #E0E0E0;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+.card-title{
+    margin-top: 10px;
+}
+.card-img{
+    height: 220px !important;
+    width: 100%;
+}
+.card-img img{
+    height: 220px;
+    width: 100%;
+    padding: 0 0 10px !important;
+}
+
+.card-distance p{
+    font-size: 12px;
+    font-weight: 500;
+}
+.card-weather p{
+    font-size: 13px;
+    font-weight: 700;
+}
+.card-known p{
+    font-size: 14px;
+    font-weight: 600;
+}
+.card-desc p{
+    font-size: 14px;
+}
+.card-time p{
+    font-size: 14px;
+    font-weight: 600;
+}
+.read-more{
+    border-radius: 3px;
+    text-align: center;
+    background: linear-gradient(95deg,#ff4339,#ff567d);
+    color: white;
+    font-weight: 600;
+    padding: 5px 0 8px 0;
+    cursor: pointer;
+}
+.read-more span{
+    font-size: 15px;
+}
+
+.location{
+    border: 1px solid #2962FF;
+    border-radius: 3px;
+    text-align: center;
+    padding: 4px 0 7px 0;
+    font-weight: 600;
+    cursor: pointer;
+    color: #2962FF
+}
+.location span{
+    font-size: 15px;
+}
+.card-rating{
+    position: absolute;
+    top: 10.5%;
+    right: 7%;
+    padding: 3px 15px;
+    color: white;
+    background: green;
+    border-radius: 3px;
+}
+.card-rating span{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.cate-content{
+    padding: 10px 10px;
+}
+
+
+.cate-select{
+    padding: 5px 10px;
+}
+
+.cate-select input{
+    font-size: 50px !important;
+    margin-top: 10px;
+}
+
+.th,.re,.ac,.dy,.bt,.pl{
+    display: none;
+    transition: all 1s;
+    animation: slide-down .3s ease-out;
+}
+
+select {
+    width: 90%;
+    border: 2px solid black;
+    padding: 6.5px 0 6.5px 25px;
+    font-size: 20px !important;
+}
+
+
+
+
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}

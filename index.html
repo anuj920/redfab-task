@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RedFab</title>
+
+    <link rel="stylesheet" href="assets/StyleSheets/main.css">
+    <link rel="stylesheet" href="assets/StyleSheets/responsive.css">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+</head>
+
+<body>
+
+
+    <br>
+    <br>
+
+    <div class="container-fluid">
+        <h2 style="text-align: center;">Category Page</h2>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="cate">
+                    <div class="cate-content">
+                        <div class="cate-select">
+                            <h5>Select Category For Filter</h5>
+                            <form onclick="showcate()" id="cate">
+                                <input type="radio" name="cate" value="th"> Themes</input><br>
+                                <input type="radio" name="cate" value="re"> Region</input><br>
+                                <input type="radio" name="cate" value="ac"> Activities</input><br>
+                                <input type="radio" name="cate" value="bt"> Best Time</input><br>
+                                <input type="radio" name="cate" value="pl"> Places</input><br>
+                                <input type="radio" name="cate" value="dy"> Days</input><br>
+                            </form>
+                        </div>
+                        <br>
+                        <div class="th cate-option">
+                            <h5>By Themes</h5>
+                            <select onclick="showdiv()" id="messagetype">
+                                <option value="" disabled>---------</option>
+                                <option value="mycard">All Content</option>
+                                <option value="hill"> Hill Stations</option>
+                                <option value="beache"> Beaches</option>
+                                <option value="honey"> Honeymoon</option>
+                                <option value="wild"> Wildlife</option>
+                                <option value="heritage"> Heritage</option>
+                                <option value="nature"> Nature</option>
+                            </select>
+                        </div>
+                        <div class="re cate-option">
+                            <h5>By Region</h5>
+                            <select onclick="showdiv1()" id="messagetype1">
+                                <option value="" disabled>---------</option>
+                                <option value="mycard">All Content</option>
+                                <option value="ni"> North India</option>
+                                <option value="si"> South India</option>
+                                <option value="ei"> East India</option>
+                                <option value="wi"> West India</option>
+                                <option value="ci"> Central India</option>
+                                <option value="ne"> North - East</option>
+                            </select>
+                        </div>
+                        <div class="ac cate-option">
+                            <h5>By Activities</h5>
+                            <select onclick="showdiv2()" id="messagetype2">
+                                <option value="" disabled>---------</option>
+                                <option value="mycard">All Content</option>
+                                <option value="ws"> Water Sports</option>
+                                <option value="tr"> Trekking</option>
+                                <option value="ss"> Snow Sport</option>
+                                <option value="es"> Extreme Sports</option>
+                                <option value="ad"> Adventures</option>
+                            </select>
+                        </div>
+                        <div class="bt cate-option">
+                            <h5>By Best Time</h5>
+                            <select onclick="showdiv3()" id="messagetype3">
+                                <option value="" disabled>---------</option>
+                                <option value="mycard">All Content</option>
+                                <option value="jf"> Jan-Feb</option>
+                                <option value="ma"> March-April</option>
+                                <option value="mj"> May-June</option>
+                                <option value="ja"> July-August</option>
+                                <option value="so"> Sep-Oct</option>
+                                <option value="nd"> Nov-Dec</option>
+                            </select>
+                        </div>
+                        <div class="pl cate-option">
+                            <h5>By Place</h5>
+                            <select onclick="showdiv4()" id="messagetype4">
+                                <option value="" disabled>---------</option>
+                                <option value="mycard">All Content</option>
+                                <option value="d"> Delhi</option>
+                                <option value="s"> Simla</option>
+                                <option value="p"> Pune</option>
+                                <option value="l"> Ladakh</option>
+                                <option value="k"> Karnatka</option>
+                            </select>
+                        </div>
+                        <div class="dy cate-option">
+                            <h5>By Days</h5>
+                            <select onclick="showdiv5()" id="messagetype5">
+                                <option value="" disabled>---------</option>
+                                <option value="mycard">All Content</option>
+                                <option value="2"> 0 - 2 Days</option>
+                                <option value="5"> 3 - 5 Days</option>
+                                <option value="9"> 6 - 9 Days</option>
+                                <option value="13"> 10 - 13 Days</option>
+                                <option value="17"> 14 - 17 Days</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="content col-9">
+                <div class="row">
+                    <div class="mycard col-9 col-sm-6 col-md-6 col-lg-4 hill heritage s 5 tr si nd">
+                        <div class="card-content ">
+                            <div class="card-title">
+                                <h5> <strong>Darjeeling, West Bengal</strong></h5>
+                            </div>
+                            <div class="card-img">
+                                <img src="assets/Images/DARJEELING.jpg" alt="Image Not Availvle">
+                            </div>
+                            <div class="card-distance">
+                                <p>Too Far Form Delhi</p>
+                            </div>
+                            <div class="card-weather">
+                                <p>Current Weather: 25°C</p>
+                            </div>
+                            <div class="card-known">
+                                <p><strong>Known For:</strong> Darjeeling Himalayan Railway | Tiger Hill | Batasia Loop
+                                </p>
+                            </div>
+                            <div class="card-desc">
+                                <p>Situated on the banks of three rivers- Madupetti, Nallathanni and Periavaru, Munnar
+                                    is an idyllic hill station, famous for its tea estates, exotic scenery, abundance of
+                                    flora and fauna and craggy peaks.</p>
+                            </div>
+                            <div class="card-time">
+                                <p><strong>Best Time:</strong> February to March</p>
+                            </div>
+                            <div class="card-button" style="margin: 10px 0;">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="read-more">
+                                            <span>Read More</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="location">
+                                            <span>21 Darjeeling Attractions</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-rating">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mycard col-9 col-sm-6 col-md-6 col-lg-4 beache honey nature ei ss mj 9 p">
+                        <div class="card-content ">
+                            <div class="card-title">
+                                <h5> <strong>Coorg, Karnataka</strong></h5>
+                            </div>
+                            <div class="card-img">
+                                <img src="assets/Images/GOA.jpg" alt="Image Not Availvle">
+                            </div>
+                            <div class="card-distance">
+                                <p>Too Far Form Delhi</p>
+                            </div>
+                            <div class="card-weather">
+                                <p>Current Weather: 25°C</p>
+                            </div>
+                            <div class="card-known">
+                                <p><strong>Known For:</strong> Darjeeling Himalayan Railway | Tiger Hill | Batasia Loop
+                                </p>
+                            </div>
+                            <div class="card-desc">
+                                <p>Situated on the banks of three rivers- Madupetti, Nallathanni and Periavaru, Munnar
+                                    is an idyllic hill station, famous for its tea estates, exotic scenery, abundance of
+                                    flora and fauna and craggy peaks.</p>
+                            </div>
+                            <div class="card-time">
+                                <p><strong>Best Time:</strong> February to March</p>
+                            </div>
+                            <div class="card-button" style="margin: 10px 0;">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="read-more">
+                                            <span>Read More</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="location">
+                                            <span>Coorg, Karnataka</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-rating">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mycard col-9 col-sm-6 col-md-6 col-lg-4 hill beache honey nature wild ci ad so 13 l">
+                        <div class="card-content ">
+                            <div class="card-title">
+                                <h5> <strong>Shimla Tourism</strong></h5>
+                            </div>
+                            <div class="card-img">
+                                <img src="assets/Images/MANALI.jpg" alt="Image Not Availvle">
+                            </div>
+                            <div class="card-distance">
+                                <p>Too Far Form Delhi</p>
+                            </div>
+                            <div class="card-weather">
+                                <p>Current Weather: 25°C</p>
+                            </div>
+                            <div class="card-known">
+                                <p><strong>Known For:</strong> Darjeeling Himalayan Railway | Tiger Hill | Batasia Loop
+                                </p>
+                            </div>
+                            <div class="card-desc">
+                                <p>Situated on the banks of three rivers- Madupetti, Nallathanni and Periavaru, Munnar
+                                    is an idyllic hill station, famous for its tea estates, exotic scenery, abundance of
+                                    flora and fauna and craggy peaks.</p>
+                            </div>
+                            <div class="card-time">
+                                <p><strong>Best Time:</strong> February to March</p>
+                            </div>
+                            <div class="card-button" style="margin: 10px 0;">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="read-more">
+                                            <span>Read More</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="location">
+                                            <span>Shimla Tourism</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-rating">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mycard col-9 col-sm-6 col-md-6 col-lg-4 hill heritage nature s 2 es ne nd">
+                        <div class="card-content ">
+                            <div class="card-title">
+                                <h5> <strong>Sonamarg, Jammu & Kashmir</strong></h5>
+                            </div>
+                            <div class="card-img">
+                                <img src="assets/Images/MCLEODGANJ.jpg" alt="Image Not Availvle">
+                            </div>
+                            <div class="card-distance">
+                                <p>Too Far Form Delhi</p>
+                            </div>
+                            <div class="card-weather">
+                                <p>Current Weather: 25°C</p>
+                            </div>
+                            <div class="card-known">
+                                <p><strong>Known For:</strong> Darjeeling Himalayan Railway | Tiger Hill | Batasia Loop
+                                </p>
+                            </div>
+                            <div class="card-desc">
+                                <p>Situated on the banks of three rivers- Madupetti, Nallathanni and Periavaru, Munnar
+                                    is an idyllic hill station, famous for its tea estates, exotic scenery, abundance of
+                                    flora and fauna and craggy peaks.</p>
+                            </div>
+                            <div class="card-time">
+                                <p><strong>Best Time:</strong> February to March</p>
+                            </div>
+                            <div class="card-button" style="margin: 10px 0;">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="read-more">
+                                            <span>Read More</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="location">
+                                            <span>Sonamarg,Jammu</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-rating">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mycard col-9 col-sm-6 col-md-6 col-lg-4 honey heritage nature wild 9 mj ws wi d">
+                        <div class="card-content ">
+                            <div class="card-title">
+                                <h5> <strong> Nandi Hills, Karnataka</strong></h5>
+                            </div>
+                            <div class="card-img">
+                                <img src="assets/Images/MUNNAR.jpg" alt="Image Not Availvle">
+                            </div>
+                            <div class="card-distance">
+                                <p>Too Far Form Delhi</p>
+                            </div>
+                            <div class="card-weather">
+                                <p>Current Weather: 25°C</p>
+                            </div>
+                            <div class="card-known">
+                                <p><strong>Known For:</strong> Darjeeling Himalayan Railway | Tiger Hill | Batasia Loop
+                                </p>
+                            </div>
+                            <div class="card-desc">
+                                <p>Situated on the banks of three rivers- Madupetti, Nallathanni and Periavaru, Munnar
+                                    is an idyllic hill station, famous for its tea estates, exotic scenery, abundance of
+                                    flora and fauna and craggy peaks.</p>
+                            </div>
+                            <div class="card-time">
+                                <p><strong>Best Time:</strong> February to March</p>
+                            </div>
+                            <div class="card-button" style="margin: 10px 0;">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="read-more">
+                                            <span>Read More</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="location">
+                                            <span> Nandi Hills, Karnataka</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-rating">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mycard col-9 col-sm-6 col-md-6 col-lg-4 beache honey heritage wild s 2 jf es ni">
+                        <div class="card-content ">
+                            <div class="card-title">
+                                <h5> <strong>Pune Tourism</strong></h5>
+                            </div>
+                            <div class="card-img">
+                                <img src="assets/Images/OOTY.jpg" alt="Image Not Availvle">
+                            </div>
+                            <div class="card-distance">
+                                <p>Too Far Form Delhi</p>
+                            </div>
+                            <div class="card-weather">
+                                <p>Current Weather: 25°C</p>
+                            </div>
+                            <div class="card-known">
+                                <p><strong>Known For:</strong> Darjeeling Himalayan Railway | Tiger Hill | Batasia Loop
+                                </p>
+                            </div>
+                            <div class="card-desc">
+                                <p>Situated on the banks of three rivers- Madupetti, Nallathanni and Periavaru, Munnar
+                                    is an idyllic hill station, famous for its tea estates, exotic scenery, abundance of
+                                    flora and fauna and craggy peaks.</p>
+                            </div>
+                            <div class="card-time">
+                                <p><strong>Best Time:</strong> February to March</p>
+                            </div>
+                            <div class="card-button" style="margin: 10px 0;">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="read-more">
+                                            <span>Read More</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="location">
+                                            <span>Pune Tourism</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-rating">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mycard col-9 col-sm-6 col-md-6 col-lg-4 heritage nature heritage wild es mj si 13 k">
+                        <div class="card-content ">
+                            <div class="card-title">
+                                <h5> <strong>Delhi Tourism</strong></h5>
+                            </div>
+                            <div class="card-img">
+                                <img src="assets/Images/attr_11765.jpg" alt="Image Not Availvle">
+                            </div>
+                            <div class="card-distance">
+                                <p>Too Far Form Delhi</p>
+                            </div>
+                            <div class="card-weather">
+                                <p>Current Weather: 25°C</p>
+                            </div>
+                            <div class="card-known">
+                                <p><strong>Known For:</strong> Darjeeling Himalayan Railway | Tiger Hill | Batasia Loop
+                                </p>
+                            </div>
+                            <div class="card-desc">
+                                <p>Situated on the banks of three rivers- Madupetti, Nallathanni and Periavaru, Munnar
+                                    is an idyllic hill station, famous for its tea estates, exotic scenery, abundance of
+                                    flora and fauna and craggy peaks.</p>
+                            </div>
+                            <div class="card-time">
+                                <p><strong>Best Time:</strong> February to March</p>
+                            </div>
+                            <div class="card-button" style="margin: 10px 0;">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="read-more">
+                                            <span>Read More</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="location">
+                                            <span>Delhi Tourism</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-rating">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mycard col-9 col-sm-6 col-md-6 col-lg-4 hill heritage wild nature p 9 ja es ei">
+                        <div class="card-content ">
+                            <div class="card-title">
+                                <h5> <strong>North Sikkim, Sikkim</strong></h5>
+                            </div>
+                            <div class="card-img">
+                                <img src="assets/Images/dest_wiki_6702.jpg" alt="Image Not Availvle">
+                            </div>
+                            <div class="card-distance">
+                                <p>Too Far Form Delhi</p>
+                            </div>
+                            <div class="card-weather">
+                                <p>Current Weather: 25°C</p>
+                            </div>
+                            <div class="card-known">
+                                <p><strong>Known For:</strong> Darjeeling Himalayan Railway | Tiger Hill | Batasia Loop
+                                </p>
+                            </div>
+                            <div class="card-desc">
+                                <p>Situated on the banks of three rivers- Madupetti, Nallathanni and Periavaru, Munnar
+                                    is an idyllic hill station, famous for its tea estates, exotic scenery, abundance of
+                                    flora and fauna and craggy peaks.</p>
+                            </div>
+                            <div class="card-time">
+                                <p><strong>Best Time:</strong> February to March</p>
+                            </div>
+                            <div class="card-button" style="margin: 10px 0;">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="read-more">
+                                            <span>Read More</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="location">
+                                            <span>North Sikkim, Sikkim</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-rating">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mycard col-9 col-sm-6 col-md-6 col-lg-4 honey heritage nature wild 17 d ma ss wi">
+                        <div class="card-content ">
+                            <div class="card-title">
+                                <h5> <strong>Almora, Uttarakhand</strong></h5>
+                            </div>
+                            <div class="card-img">
+                                <img src="assets/Images/MCLEODGANJ.jpg" alt="Image Not Availvle">
+                            </div>
+                            <div class="card-distance">
+                                <p>Too Far Form Delhi</p>
+                            </div>
+                            <div class="card-weather">
+                                <p>Current Weather: 25°C</p>
+                            </div>
+                            <div class="card-known">
+                                <p><strong>Known For:</strong> Darjeeling Himalayan Railway | Tiger Hill | Batasia Loop
+                                </p>
+                            </div>
+                            <div class="card-desc">
+                                <p>Situated on the banks of three rivers- Madupetti, Nallathanni and Periavaru, Munnar
+                                    is an idyllic hill station, famous for its tea estates, exotic scenery, abundance of
+                                    flora and fauna and craggy peaks.</p>
+                            </div>
+                            <div class="card-time">
+                                <p><strong>Best Time:</strong> February to March</p>
+                            </div>
+                            <div class="card-button" style="margin: 10px 0;">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="read-more">
+                                            <span>Read More</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="location">
+                                            <span>Almora, Uttarakhand</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-rating">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mycard col-9 col-sm-6 col-md-6 col-lg-4 hill nature heritage l 9 so es ne">
+                        <div class="card-content ">
+                            <div class="card-title">
+                                <h5> <strong>
+                                        Vaishno Devi, Jammu & Kashmir</strong></h5>
+                            </div>
+                            <div class="card-img">
+                                <img src="assets/Images/OOTY.jpg" alt="Image Not Availvle">
+                            </div>
+                            <div class="card-distance">
+                                <p>Too Far Form Delhi</p>
+                            </div>
+                            <div class="card-weather">
+                                <p>Current Weather: 25°C</p>
+                            </div>
+                            <div class="card-known">
+                                <p><strong>Known For:</strong> Darjeeling Himalayan Railway | Tiger Hill | Batasia Loop
+                                </p>
+                            </div>
+                            <div class="card-desc">
+                                <p>Situated on the banks of three rivers- Madupetti, Nallathanni and Periavaru, Munnar
+                                    is an idyllic hill station, famous for its tea estates, exotic scenery, abundance of
+                                    flora and fauna and craggy peaks.</p>
+                            </div>
+                            <div class="card-time">
+                                <p><strong>Best Time:</strong> February to March</p>
+                            </div>
+                            <div class="card-button" style="margin: 10px 0;">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="read-more">
+                                            <span>Read More</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="location">
+                                            <span>Vaishno Devi, Jammu</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-rating">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mycard col-9 col-sm-6 col-md-6 col-lg-4 honey hill nature 5 ja es ci">
+                        <div class="card-content ">
+                            <div class="card-title">
+                                <h5> <strong>Udaipur, Rajasthan</strong></h5>
+                            </div>
+                            <div class="card-img">
+                                <img src="assets/Images/attr_11765.jpg" alt="Image Not Availvle">
+                            </div>
+                            <div class="card-distance">
+                                <p>Too Far Form Delhi</p>
+                            </div>
+                            <div class="card-weather">
+                                <p>Current Weather: 25°C</p>
+                            </div>
+                            <div class="card-known">
+                                <p><strong>Known For:</strong> Darjeeling Himalayan Railway | Tiger Hill | Batasia Loop
+                                </p>
+                            </div>
+                            <div class="card-desc">
+                                <p>Situated on the banks of three rivers- Madupetti, Nallathanni and Periavaru, Munnar
+                                    is an idyllic hill station, famous for its tea estates, exotic scenery, abundance of
+                                    flora and fauna and craggy peaks.</p>
+                            </div>
+                            <div class="card-time">
+                                <p><strong>Best Time:</strong> February to March</p>
+                            </div>
+                            <div class="card-button" style="margin: 10px 0;">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="read-more">
+                                            <span>Read More</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="location">
+                                            <span>Udaipur, Rajasthan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-rating">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mycard col-9 col-sm-6 col-md-6 col-lg-4 heritage hill nature heritage ni s 13 ma tr">
+                        <div class="card-content ">
+                            <div class="card-title">
+                                <h5> <strong>Agra ,Uttar Pradesh</strong></h5>
+                            </div>
+                            <div class="card-img">
+                                <img src="assets/Images/GOA.jpg" alt="Image Not Availvle">
+                            </div>
+                            <div class="card-distance">
+                                <p>Too Far Form Delhi</p>
+                            </div>
+                            <div class="card-weather">
+                                <p>Current Weather: 25°C</p>
+                            </div>
+                            <div class="card-known">
+                                <p><strong>Known For:</strong> Darjeeling Himalayan Railway | Tiger Hill | Batasia Loop
+                                </p>
+                            </div>
+                            <div class="card-desc">
+                                <p>Situated on the banks of three rivers- Madupetti, Nallathanni and Periavaru, Munnar
+                                    is an idyllic hill station, famous for its tea estates, exotic scenery, abundance of
+                                    flora and fauna and craggy peaks.</p>
+                            </div>
+                            <div class="card-time">
+                                <p><strong>Best Time:</strong> February to March</p>
+                            </div>
+                            <div class="card-button" style="margin: 10px 0;">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="read-more">
+                                            <span>Read More</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="location">
+                                            <span>Agra ,Uttar Pradesh</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-rating">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mycard col-9 col-sm-6 col-md-6 col-lg-4 honey heritage nature ad jf 2 k wi">
+                        <div class="card-content ">
+                            <div class="card-title">
+                                <h5> <strong>
+                                        Kasauli, Himachal Pradesh</strong></h5>
+                            </div>
+                            <div class="card-img">
+                                <img src="assets/Images/dest_wiki_6702.jpg" alt="Image Not Availvle">
+                            </div>
+                            <div class="card-distance">
+                                <p>Too Far Form Delhi</p>
+                            </div>
+                            <div class="card-weather">
+                                <p>Current Weather: 25°C</p>
+                            </div>
+                            <div class="card-known">
+                                <p><strong>Known For:</strong> Darjeeling Himalayan Railway | Tiger Hill | Batasia Loop
+                                </p>
+                            </div>
+                            <div class="card-desc">
+                                <p>Situated on the banks of three rivers- Madupetti, Nallathanni and Periavaru, Munnar
+                                    is an idyllic hill station, famous for its tea estates, exotic scenery, abundance of
+                                    flora and fauna and craggy peaks.</p>
+                            </div>
+                            <div class="card-time">
+                                <p><strong>Best Time:</strong> February to March</p>
+                            </div>
+                            <div class="card-button" style="margin: 10px 0;">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="read-more">
+                                            <span>Read More</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="location">
+                                            <span>Kasauli</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-rating">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mycard col-9 col-sm-6 col-md-6 col-lg-4 hill wild p 9 ja es ne">
+                        <div class="card-content ">
+                            <div class="card-title">
+                                <h5> <strong>
+                                        Haridwar, Uttarakhand</strong></h5>
+                            </div>
+                            <div class="card-img">
+                                <img src="assets/Images/DARJEELING.jpg" alt="Image Not Availvle">
+                            </div>
+                            <div class="card-distance">
+                                <p>Too Far Form Delhi</p>
+                            </div>
+                            <div class="card-weather">
+                                <p>Current Weather: 25°C</p>
+                            </div>
+                            <div class="card-known">
+                                <p><strong>Known For:</strong> Darjeeling Himalayan Railway | Tiger Hill | Batasia Loop
+                                </p>
+                            </div>
+                            <div class="card-desc">
+                                <p>Situated on the banks of three rivers- Madupetti, Nallathanni and Periavaru, Munnar
+                                    is an idyllic hill station, famous for its tea estates, exotic scenery, abundance of
+                                    flora and fauna and craggy peaks.</p>
+                            </div>
+                            <div class="card-time">
+                                <p><strong>Best Time:</strong> February to March</p>
+                            </div>
+                            <div class="card-button" style="margin: 10px 0;">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="read-more">
+                                            <span>Read More</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="location">
+                                            <span>Haridwar, Uttarakhand</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-rating">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mycard col-9 col-sm-6 col-md-6 col-lg-4 wild nature heritage honey ni ss so 13 d">
+                        <div class="card-content ">
+                            <div class="card-title">
+                                <h5> <strong>Noida , UP</strong></h5>
+                            </div>
+                            <div class="card-img">
+                                <img src="assets/Images/MCLEODGANJ.jpg" alt="Image Not Availvle">
+                            </div>
+                            <div class="card-distance">
+                                <p>Too Far Form Delhi</p>
+                            </div>
+                            <div class="card-weather">
+                                <p>Current Weather: 25°C</p>
+                            </div>
+                            <div class="card-known">
+                                <p><strong>Known For:</strong> Darjeeling Himalayan Railway | Tiger Hill | Batasia Loop
+                                </p>
+                            </div>
+                            <div class="card-desc">
+                                <p>Situated on the banks of three rivers- Madupetti, Nallathanni and Periavaru, Munnar
+                                    is an idyllic hill station, famous for its tea estates, exotic scenery, abundance of
+                                    flora and fauna and craggy peaks.</p>
+                            </div>
+                            <div class="card-time">
+                                <p><strong>Best Time:</strong> February to March</p>
+                            </div>
+                            <div class="card-button" style="margin: 10px 0;">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="read-more">
+                                            <span>Read More</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="location">
+                                            <span>Noida , UP</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-rating">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mycard col-9 col-sm-6 col-md-6 col-lg-4 honey heritage ws jf 2 s ci">
+                        <div class="card-content ">
+                            <div class="card-title">
+                                <h5> <strong>Jaipur,Rajasthan</strong></h5>
+                            </div>
+                            <div class="card-img">
+                                <img src="assets/Images/attr_11765.jpg" alt="Image Not Availvle">
+                            </div>
+                            <div class="card-distance">
+                                <p>Too Far Form Delhi</p>
+                            </div>
+                            <div class="card-weather">
+                                <p>Current Weather: 25°C</p>
+                            </div>
+                            <div class="card-known">
+                                <p><strong>Known For:</strong> Darjeeling Himalayan Railway | Tiger Hill | Batasia Loop
+                                </p>
+                            </div>
+                            <div class="card-desc">
+                                <p>Situated on the banks of three rivers- Madupetti, Nallathanni and Periavaru, Munnar
+                                    is an idyllic hill station, famous for its tea estates, exotic scenery, abundance of
+                                    flora and fauna and craggy peaks.</p>
+                            </div>
+                            <div class="card-time">
+                                <p><strong>Best Time:</strong> February to March</p>
+                            </div>
+                            <div class="card-button" style="margin: 10px 0;">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="read-more">
+                                            <span>Read More</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="location">
+                                            <span>Jaipur,Rajasthan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-rating">
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+</body>
+
+
+<script src="assets/js/main.js"></script>
+
+</html>
